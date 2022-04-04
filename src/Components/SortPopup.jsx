@@ -39,7 +39,7 @@ export const SortPopup = ({ items }) => {
           </svg>
 
           <b>Сортировка по:</b>
-          <span>{activeLabel}</span>
+          <span>{items[indexItem]}</span>
         </div>
       </div>
       {isVisiblePopup && (
