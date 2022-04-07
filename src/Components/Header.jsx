@@ -6,13 +6,15 @@ export const Header = () => {
   return (
     <div className="header">
       <div className="container">
-        <div className="header__logo">
-          <Logo />
-          <div>
-            <h1>React Pizza</h1>
-            <p>самая вкусная пицца во вселенной</p>
+        <Link to="/">
+          <div className="header__logo">
+            <Logo />
+            <div>
+              <h1>React Pizza</h1>
+              <p>самая вкусная пицца во вселенной</p>
+            </div>
           </div>
-        </div>
+        </Link>
         <Link to="/cart">
           <div className="header__cart">
             <a href="/cart.html" className="button button--cart">
