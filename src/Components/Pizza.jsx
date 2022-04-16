@@ -9,6 +9,10 @@ export const Pizza = ({ obj }) => {
   const onSelectType = (index) => {
     setActiveType(index);
   };
+
+  const onSelectSize = (index) => {
+    setActiveSize(index);
+  };
   return (
     <div className="pizza-block">
       <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
@@ -35,20 +39,19 @@ export const Pizza = ({ obj }) => {
         </ul>
         <ul>
           {/* <li className="active">26 см.</li> */}
-          {sizes.map((activeSize, index) => {
+          {sizes.map((size, index) => {
             return (
               <li
-                onClick={() => onSelectType(index)}
+                onClick={() => onSelectSize(index)}
                 className={
-                  activeSize === index
-                    ? "active"
-                    : !sizes.includes(index)
-                    ? "disabled"
-                    : ""
+                  activeSize === index ? "active" : ""
+                  // : !sizes.includes(index)
+                  // ? "disabled"
+                  // : ""
                 }
-                key={activeSize}
+                key={size}
               >
-                {activeSize}
+                {size}
               </li>
             );
           })}
